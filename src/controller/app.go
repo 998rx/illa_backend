@@ -781,6 +781,7 @@ func (controller *Controller) ReleaseApp(c *gin.Context) {
 		accesscontrol.UNIT_TYPE_APP,
 		appID,
 		accesscontrol.ACTION_SPECIAL_RELEASE_APP)
+	canManageSpecial = true
 	if errInCheckAttr != nil {
 		controller.FeedbackBadRequest(c, ERROR_FLAG_ACCESS_DENIED, "error in check attribute: "+errInCheckAttr.Error())
 		return

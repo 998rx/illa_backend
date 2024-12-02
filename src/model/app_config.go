@@ -58,8 +58,8 @@ type AppConfig struct {
 
 func NewAppConfig() *AppConfig {
 	return &AppConfig{
-		Public:      false,
-		WaterMark:   true,
+		Public:      true,
+		WaterMark:   false,
 		Description: "",
 		AppType:     APP_TYPE_PC,
 	}
